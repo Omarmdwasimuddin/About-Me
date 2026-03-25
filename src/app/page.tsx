@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { profile } from "@/data/profile";
+import EmailCopyButton from "@/components/EmailCopyButton";
 
 function Section({
   id,
@@ -22,10 +23,10 @@ function Section({
 
 export default function Home() {
   const { contact } = profile;
+  const email = contact.email?.trim();
   const links = [
     { label: "GitHub", href: contact.github },
     { label: "LinkedIn", href: contact.linkedin },
-    { label: "Email", href: contact.email },
   ].filter((l) => Boolean(l.href?.trim()));
 
   return (
@@ -114,15 +115,20 @@ export default function Home() {
           </Section>
 
           <Section id="contact" title="Contact">
-            {links.length > 0 ? (
+            {links.length > 0 || email ? (
               <ul className="flex flex-wrap gap-3">
+                {email ? (
+                  <li>
+                    <EmailCopyButton email={email} />
+                  </li>
+                ) : null}
                 {links.map(({ label, href }) => (
                   <li key={label}>
                     <a
                       href={href}
                       className="inline-flex items-center rounded-lg border border-cyan-600/30 bg-cyan-600/10 px-4 py-2 text-sm font-medium text-cyan-700 transition-colors hover:bg-cyan-600/20"
-                      target={href.startsWith("mailto:") ? undefined : "_blank"}
-                      rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {label}
                     </a>
@@ -131,7 +137,7 @@ export default function Home() {
               </ul>
             ) : (
               <p className="text-sm text-zinc-600">
-                Add your GitHub, LinkedIn, and email URLs in{" "}
+                Add your GitHub, LinkedIn, and email in{" "}
                 <code className="rounded bg-zinc-200 px-1.5 py-0.5 text-xs">
                   src/data/profile.ts
                 </code>
