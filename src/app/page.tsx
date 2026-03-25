@@ -51,7 +51,7 @@ export default function Home() {
             <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl">
               {profile.name}
             </h1>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-zinc-600">
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-zinc-600 text-justify">
               {profile.tagline}
             </p>
           </div>
@@ -59,8 +59,8 @@ export default function Home() {
 
         <main className="flex flex-1 flex-col gap-14 sm:gap-16">
           <Section id="about" title="About">
-            <p className="leading-relaxed">{profile.about}</p>
-            <p className="mt-4 text-sm leading-relaxed text-zinc-600">
+            <p className="leading-relaxed text-justify">{profile.about}</p>
+            <p className="mt-4 text-sm leading-relaxed text-zinc-600 text-justify">
               {profile.learning}
             </p>
           </Section>
@@ -89,7 +89,7 @@ export default function Home() {
           </Section>
 
           <Section id="projects" title="Projects">
-            <p className="leading-relaxed">{profile.projectsSummary}</p>
+            <p className="leading-relaxed text-justify">{profile.projectsSummary}</p>
           </Section>
 
           <Section id="education" title="Education">
