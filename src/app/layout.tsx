@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "Md. Wasim Uddin — Fullstack Developer",
   description:
     "Fullstack developer and software engineer. React, Next.js, Node.js, NestJS, PostgreSQL, MySQL, Shopify, WordPress. Learning DevOps.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
