@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# About Me-
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+This is a personal about-me portfolio website for Md. Wasim Uddin, a Fullstack Developer and Software Engineer. The project showcases skills, experience, and tech stack in a clean, modern, and professional manner.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Owner Information
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Name: Md. Wasim Uddin
+- Role: Fullstack Developer / Software Engineer
+- Status: Currently learning DevOps
+- Experience Level: Strong — multiple real-world projects completed
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Tech Stack & Skills
 
-To learn more about Next.js, take a look at the following resources:
+### Frontend
+- React.js
+- Next.js
+- JavaScript (ES6+)
+- Typescript
+- Tailwind CSS
+- Bootstrap
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Backend
+- Node.js / NestJS
+- Prisma ORM
+- REST API design
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Databases
+- PostgreSQL
+- MySQL
 
-## Deploy on Vercel
+### CMS / E-commerce
+- Shopify
+- WordPress
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Infrastructure & DevOps (Learning)
+- Docker
+- DevOps practices (currently in progress)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Project Goals
+
+- Showcase who Wasim is as a developer
+- Highlight tech stack and expertise
+- Display real project experience
+- Provide contact or professional links
+- Clean, modern single-page design
+
+---
+
+## Design Direction
+
+- Tone: Professional, modern, developer-focused
+- Theme: Dark or neutral with sharp accent colors
+- Layout: Single-page scrollable or section-based
+- Typography: Clean, readable, developer aesthetic
+- Content Sections:
+  1. Hero — Name, title, short intro
+  2. About — Brief background & current focus
+  3. Skills / Tech Stack — Visual representation
+  4. Projects — Highlight experience
+  5. Contact — Links (GitHub, LinkedIn, email, etc.)
+
+---
+
+## Development Notes
+
+- Framework: Next.js (preferred)
+- Styling: Tailwind CSS
+- No unnecessary dependencies — keep it lean
+- Mobile responsive is a must
+- Animations should be subtle and purposeful
+
+---
+
+## Education
+
+- B.Sc (Hon's) in Computer Science and Engineering (CSE)
+- institute: Bangladesh Institute of Science and Technology(BIST)
+
+## Current Learning Focus
+
+- DevOps: Docker, CI/CD pipelines, deployment strategies
+- Cloud infrastructure basics
+
+---
+
+## Conventions
+
+- Use clean, readable code
+- Component-based structure
+- Keep content in a separate data/config file for easy updates
+- Follow Next.js App Router conventions
