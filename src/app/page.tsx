@@ -1,65 +1,150 @@
 import Image from "next/image";
+import { profile } from "@/data/profile";
+
+function Section({
+  id,
+  title,
+  children,
+}: {
+  id: string;
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section id={id} className="scroll-mt-24">
+      <h2 className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+        {title}
+      </h2>
+      <div className="text-zinc-700">{children}</div>
+    </section>
+  );
+}
 
 export default function Home() {
+  const { contact } = profile;
+  const links = [
+    { label: "GitHub", href: contact.github },
+    { label: "LinkedIn", href: contact.linkedin },
+    { label: "Email", href: contact.email },
+  ].filter((l) => Boolean(l.href?.trim()));
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="min-h-full bg-white text-zinc-900">
+      <div className="mx-auto flex min-h-full max-w-3xl flex-col px-6 py-14 sm:py-20">
+        <header className="mb-16 flex flex-col gap-10 sm:mb-20 sm:flex-row sm:items-start sm:gap-12">
+          <div className="relative mx-auto h-44 w-44 shrink-0 overflow-hidden rounded-2xl border border-zinc-200/80 bg-zinc-100 shadow-sm sm:h-52 sm:w-52 sm:mx-0">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src={profile.imageSrc}
+              alt={profile.imageAlt}
+              fill
+              sizes="(max-width: 640px) 176px, 200px"
+              quality={75}
+              className="object-cover object-center"
+              priority
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+          </div>
+          <div className="flex-1 text-center sm:text-left">
+            <p className="mb-2 text-sm font-medium text-cyan-600">
+              {profile.role}
+            </p>
+            <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl">
+              {profile.name}
+            </h1>
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-zinc-600">
+              {profile.tagline}
+            </p>
+          </div>
+        </header>
+
+        <main className="flex flex-1 flex-col gap-14 sm:gap-16">
+          <Section id="about" title="About">
+            <p className="leading-relaxed">{profile.about}</p>
+            <p className="mt-4 text-sm leading-relaxed text-zinc-600">
+              {profile.learning}
+            </p>
+          </Section>
+
+          <Section id="skills" title="Skills & tech stack">
+            <dl className="space-y-6">
+              {Object.entries(profile.skills).map(([category, items]) => (
+                <div key={category}>
+                  <dt className="mb-2 text-sm font-medium text-zinc-900">
+                    {category}
+                  </dt>
+                  <dd>
+                    <ul className="flex flex-wrap gap-2">
+                      {items.map((item) => (
+                        <li key={item}>
+                          <span className="inline-block rounded-md border border-zinc-200 bg-white px-2.5 py-1 text-sm text-zinc-700">
+                            {item}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </Section>
+
+          <Section id="projects" title="Projects">
+            <p className="leading-relaxed">{profile.projectsSummary}</p>
+          </Section>
+
+          <Section id="education" title="Education">
+            <div className="space-y-3">
+              {profile.education.map((edu, idx) => (
+                <div
+                  key={`${edu.school}-${idx}`}
+                  className="rounded-xl border border-zinc-200/80 bg-white p-4"
+                >
+                  <p className="text-sm font-semibold text-zinc-900">
+                    {edu.degree}
+                  </p>
+                  <p className="text-sm text-zinc-600">{edu.school}</p>
+                  <p className="text-xs font-medium text-zinc-500">
+                    {edu.timeframe}
+                  </p>
+                  {edu.details ? (
+                    <p className="mt-2 text-sm text-zinc-600">{edu.details}</p>
+                  ) : null}
+                </div>
+              ))}
+            </div>
+          </Section>
+
+          <Section id="contact" title="Contact">
+            {links.length > 0 ? (
+              <ul className="flex flex-wrap gap-3">
+                {links.map(({ label, href }) => (
+                  <li key={label}>
+                    <a
+                      href={href}
+                      className="inline-flex items-center rounded-lg border border-cyan-600/30 bg-cyan-600/10 px-4 py-2 text-sm font-medium text-cyan-700 transition-colors hover:bg-cyan-600/20"
+                      target={href.startsWith("mailto:") ? undefined : "_blank"}
+                      rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+                    >
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-sm text-zinc-600">
+                Add your GitHub, LinkedIn, and email URLs in{" "}
+                <code className="rounded bg-zinc-200 px-1.5 py-0.5 text-xs">
+                  src/data/profile.ts
+                </code>
+                .
+              </p>
+            )}
+          </Section>
+        </main>
+
+        <footer className="mt-20 border-t border-zinc-200 pt-8 text-center text-sm text-zinc-500">
+          © {new Date().getFullYear()} {profile.name}
+        </footer>
+      </div>
     </div>
   );
 }
