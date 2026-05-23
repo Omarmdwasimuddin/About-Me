@@ -12,6 +12,16 @@ This is a professional online CV (curriculum vitae) for Md. Wasim Uddin, a Fulls
 - **Name:** Md. Wasim Uddin
 - **Role:** Fullstack Developer / Software Engineer
 - **Experience Level:** Strong — multiple real-world projects completed
+- **Phone:** 01878594002
+- **GitHub:** https://github.com/Omarmdwasimuddin
+- **Portfolio:** https://wasim-uddin-portfolio.vercel.app/
+- **LinkedIn:** https://www.linkedin.com/in/mwasimuddin/
+
+---
+
+## Professional Summary
+
+Detail-oriented Full-Stack Developer with hands-on project and freelance experience building scalable web applications using React.js, Next.js, Prisma, and PostgreSQL. Delivered complete web solutions for local businesses including websites, admin dashboards, and billing systems. Proficient in RESTful APIs, responsive UI design, and containerized deployments with Docker. Actively seeking opportunities to bring technical skills and client delivery experience to a professional team.
 
 ---
 
@@ -54,6 +64,52 @@ Standard hard-copy CV structure must be followed strictly:
 - Docker
 - CI/CD Pipelines (Jenkins)
 - DevOps practices (actively expanding)
+
+---
+
+## Work Experience
+
+### Freelance Full-Stack Developer
+**Self-Employed | 2025 – Present**
+
+- Developed and delivered complete web solutions for local businesses, including a tax and trade services firm (Tax & Trade Solutions).
+- Built a business website with modern UI, service listings, and contact system using Next.js and Tailwind CSS.
+- Designed and implemented an Admin Dashboard for internal management including client records and reporting.
+- Created an Invoice & Billing System enabling automated invoice generation and payment tracking.
+- Managed full project lifecycle — from client requirement gathering to deployment and post-launch support.
+
+---
+
+## Projects
+
+### Tax & Trade Solutions — Client Project
+**Status:** 90% Completed
+**Live URL:** https://tax-and-trade-solutions.vercel.app/
+
+- Built a full-stack platform for publishing and selling legal/tax reference books (VAT, Customs, Bond, Exam guides) in Bangladesh.
+- Implemented a **yearly subscription system** allowing users to read soft-copy books online via SSLCommerz payment gateway.
+- Developed a **PDF reader** with content protection — no-download enforcement, watermarking, and copy-paste blocking.
+- Built an **Admin Dashboard** for managing books, users, subscriptions, orders, blog posts, and consultancy requests.
+- Integrated **Supabase Auth** for user authentication and role-based access control (Admin, Writer, Reader).
+- Designed a **Blog System** with nested comments, admin moderation, and category/tag filtering.
+- Configured **PWA support** via `next-pwa` for an app-like mobile experience.
+- Applied **GSAP** and **Framer Motion** for scroll-triggered animations and smooth UI transitions.
+- **Tech Stack:** Next.js (App Router), Tailwind CSS, Prisma ORM, PostgreSQL, Supabase Auth & Storage, SSLCommerz, GSAP, Framer Motion
+
+---
+
+### Ayesha Maryam Store — Inventory Management System
+**Status:** In Progress (Client Project)
+
+- Building a full-featured multi-branch shop management system for a grocery/general store (2 branches, Chattogram).
+- Includes product management with barcode scanning, batch/lot tracking, and expiry date alerts.
+- POS (Point of Sale) interface with auto stock deduction on sale and auto stock increment on purchase.
+- Invoice PDF generation for both sales and purchases with branch-specific headers.
+- Employee management module — hiring, salary records, document uploads, and status tracking (Active / Resigned / Terminated).
+- Sales, Purchase, and Profit/Loss reports with PDF and Excel export.
+- Role-based access control — Admin (full access) and Sales Staff (limited access).
+- Low stock alert system with configurable reorder levels per product.
+- **Tech Stack:** Next.js (App Router), TypeScript, Tailwind CSS, shadcn/ui, Prisma ORM v6, PostgreSQL (NeonDB), NextAuth.js, Uploadthing, jsPDF, Recharts, Zustand, TanStack Query
 
 ---
 
