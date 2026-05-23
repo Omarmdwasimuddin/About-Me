@@ -2,15 +2,19 @@ import React from "react";
 import { cvData } from "@/data/cv";
 import Image from "next/image";
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  showPrintImage?: boolean;
+}
+
+export const Header: React.FC<HeaderProps> = ({ showPrintImage = false }) => {
   const { personalInfo } = cvData;
 
   return (
     <header className="mb-10 flex flex-col sm:flex-row justify-between items-center sm:items-start gap-6 print:opacity-100 print:transform-none">
       
-      {/* Profile Image - Only visible in Print */}
+      {/* Profile Image - Only visible in Print if selected */}
       {personalInfo.imageSrc && (
-        <div className="relative w-32 h-32 sm:w-36 sm:h-36 shrink-0 overflow-hidden rounded-xl border border-gray-200 bg-gray-50 shadow-none hidden print:block">
+        <div className={`relative w-32 h-32 sm:w-36 sm:h-36 shrink-0 overflow-hidden rounded-xl border border-gray-200 bg-gray-50 shadow-none hidden ${showPrintImage ? "print:block" : "print:hidden"}`}>
           <Image
             src={personalInfo.imageSrc}
             alt={personalInfo.name}
