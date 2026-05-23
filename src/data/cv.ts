@@ -56,8 +56,8 @@ export const cvData = {
       name: "Tax & Trade Solutions — Client Project",
       status: "90% Completed",
       liveUrl: "https://tax-and-trade-solutions.vercel.app/",
-      description: "Full-stack platform for publishing and selling legal/tax reference books. Features a yearly subscription system, SSLCommerz integration, and a secure PDF reader with content protection. Includes a robust Admin Dashboard and a comprehensive Blog System.",
-      techStack: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL", "Supabase", "SSLCommerz", "GSAP", "Framer Motion"],
+      description: "Full-stack platform for publishing and selling legal/tax reference books. Features a yearly subscription system, SSLCommerz integration, and a secure PDF reader with content protection. Currently integrating n8n-powered RAG (Retrieval-Augmented Generation) workflow for intelligent document search and automation.",
+      techStack: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL", "Supabase", "SSLCommerz", "GSAP", "Framer Motion", "n8n"],
     },
     {
       name: "Ayesha Maryam Store — Inventory Management System (Client Project)",
@@ -73,5 +73,18 @@ export const cvData = {
       year: "2024",
     },
   ],
-  certifications: [],
+  certifications: [
+    {
+      name: "DevOps Engineering (Ongoing)",
+      institution: "Interactive Cares",
+      duration: "4-month course",
+      details: "CI/CD pipelines, container orchestration, version control, and cloud deployment.",
+    },
+    {
+      name: "Mastering Next.js & Prisma",
+      institution: "Ostad",
+      duration: "4-month course",
+      details: "Hands-on full-stack course covering API integration, authentication, and deployment workflows.",
+    },
+  ],
 };

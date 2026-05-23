@@ -8,6 +8,7 @@ import { Skills } from "@/components/cv/Skills";
 import { Experience } from "@/components/cv/Experience";
 import { Projects } from "@/components/cv/Projects";
 import { Education } from "@/components/cv/Education";
+import { Certifications } from "@/components/cv/Certifications";
 
 export default function Home() {
   return (
@@ -47,6 +48,10 @@ export default function Home() {
 
             <Section title="Education">
               <Education />
+            </Section>
+
+            <Section title="Certifications & Courses">
+              <Certifications />
             </Section>
           </div>
 
