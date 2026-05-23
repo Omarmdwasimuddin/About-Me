@@ -56,5 +56,13 @@ body {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
+
+  .page-header-space {
+    height: 1cm;
+  }
+
+  .page-footer-space {
+    height: 1cm;
+  }
 }
 

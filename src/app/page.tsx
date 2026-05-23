@@ -39,7 +39,7 @@ export default function Home() {
           <tbody>
             <tr>
               <td>
-                <main className="p-8 sm:p-12 md:p-16 print:p-0 print:px-16">
+                <main className="p-8 sm:p-12 md:p-16 print:p-0 print:px-16 print:-mt-[1cm]">
                   {/* Full Header with Image */}
                   <Header />
                   
