@@ -94,7 +94,8 @@ Standard hard-copy CV structure must be followed strictly:
 - Designed a **Blog System** with nested comments, admin moderation, and category/tag filtering.
 - Configured **PWA support** via `next-pwa` for an app-like mobile experience.
 - Applied **GSAP** and **Framer Motion** for scroll-triggered animations and smooth UI transitions.
-- **Tech Stack:** Next.js (App Router), Tailwind CSS, Prisma ORM, PostgreSQL, Supabase Auth & Storage, SSLCommerz, GSAP, Framer Motion
+- Integrating **n8n-powered RAG (Retrieval-Augmented Generation)** workflow for intelligent document search and automation.
+- **Tech Stack:** Next.js (App Router), Tailwind CSS, Prisma ORM, PostgreSQL, Supabase Auth & Storage, SSLCommerz, GSAP, Framer Motion, n8n
 
 ---
 
@@ -117,6 +118,18 @@ Standard hard-copy CV structure must be followed strictly:
 
 - **Degree:** B.Sc (Hons) in Computer Science and Engineering (CSE)
 - **Institute:** Bangladesh Institute of Science and Technology (BIST)
+
+---
+
+## Certifications & Courses
+
+### DevOps Engineering *(Ongoing)*
+**Interactive Cares**
+- 4-month course covering CI/CD pipelines, container orchestration, version control, and cloud deployment.
+
+### Mastering Next.js & Prisma
+**Ostad**
+- 4-month hands-on full-stack course covering API integration, authentication, and deployment workflows.
 
 ---
 
