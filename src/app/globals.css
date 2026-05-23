@@ -22,6 +22,14 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .cv-container {
+    @apply transition-shadow duration-300;
+  }
 }
 
 @media print {

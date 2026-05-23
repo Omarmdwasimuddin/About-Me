@@ -22,8 +22,8 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 print:bg-white print:py-0 print:px-0">
-      <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden border border-gray-200 print:shadow-none print:border-none print:max-w-none">
+    <div className="min-h-screen bg-gray-50 py-4 sm:py-12 px-0 sm:px-6 lg:px-8 print:bg-white print:py-0 print:px-0">
+      <div className="max-w-4xl mx-auto bg-white shadow-xl sm:rounded-lg overflow-hidden border-y sm:border border-gray-200 print:shadow-none print:border-none print:max-w-none">
         
         {/* Print Buttons - Hidden on Print */}
         <div className="flex flex-wrap justify-end gap-3 p-4 bg-gray-50 border-b border-gray-200 print:hidden">
@@ -57,7 +57,7 @@ export default function Home() {
           <tbody>
             <tr>
               <td>
-                <main className="p-8 sm:p-12 md:p-16 print:p-0 print:px-16 print:-mt-[1cm]">
+                <main className="p-6 sm:p-12 md:p-16 print:p-0 print:px-16 print:-mt-[1cm]">
                   {/* Full Header with Image */}
                   <Header showPrintImage={showPrintImage} />
                   
