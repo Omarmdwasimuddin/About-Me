@@ -1,100 +1,96 @@
 @AGENTS.md
-# CLAUDE.md — About Me Project
+# CLAUDE.md — Online CV Project
 
 ## Project Overview
 
-This is a personal about-me portfolio website for Md. Wasim Uddin, a Fullstack Developer and Software Engineer. The project showcases skills, experience, and tech stack in a clean, modern, and professional manner.
+This is a professional online CV (curriculum vitae) for Md. Wasim Uddin, a Fullstack Developer and Software Engineer. The goal is to replicate the structure and feel of a hard copy CV — clean, formal, ATS-friendly layout — but delivered as a web page. It is intended for job applications in software engineering and fullstack development roles.
 
 ---
 
 ## Owner Information
 
-- Name: Md. Wasim Uddin
-- Role: Fullstack Developer / Software Engineer
-- Status: Currently learning DevOps
-- Experience Level: Strong — multiple real-world projects completed
+- **Name:** Md. Wasim Uddin
+- **Role:** Fullstack Developer / Software Engineer
+- **Experience Level:** Strong — multiple real-world projects completed
 
 ---
 
-## Tech Stack & Skills
+## CV Sections (in order)
+
+Standard hard-copy CV structure must be followed strictly:
+
+1. **Header** — Full name, job title, contact details (email, phone, GitHub, LinkedIn, location)
+2. **Summary / Objective** — 2–3 line professional summary tailored for software engineering roles
+3. **Skills** — Grouped by category, concise and scannable
+4. **Work Experience** — Job title, company, duration, bullet-point responsibilities/achievements
+5. **Projects** — Project name, short description, tech stack used
+6. **Education** — Degree, institution, year
+7. **Certifications / Courses** *(if any)*
+
+---
+
+## Skills
 
 ### Frontend
-- React.js
-- Next.js
-- JavaScript (ES6+)
-- Typescript
-- Tailwind CSS
-- Bootstrap
+- React.js, Next.js
+- JavaScript (ES6+), TypeScript
+- Tailwind CSS, Bootstrap
 
 ### Backend
-- Node.js / NestJS
+- Node.js, NestJS
 - Prisma ORM
-- REST API design
+- REST API Design
 
 ### Databases
-- PostgreSQL
-- MySQL
+- PostgreSQL, MySQL
+
+### Automation & Workflow
+- n8n (workflow automation, integrations, custom nodes)
 
 ### CMS / E-commerce
-- Shopify
-- WordPress
+- Shopify, WordPress
 
-### Infrastructure & DevOps (Learning)
+### DevOps & Infrastructure
 - Docker
-- DevOps practices (currently in progress)
-
----
-
-## Project Goals
-
-- Showcase who Wasim is as a developer
-- Highlight tech stack and expertise
-- Display real project experience
-- Provide contact or professional links
-- Clean, modern single-page design
-
----
-
-## Design Direction
-
-- Tone: Professional, modern, developer-focused
-- Theme: Dark or neutral with sharp accent colors
-- Layout: Single-page scrollable or section-based
-- Typography: Clean, readable, developer aesthetic
-- Content Sections:
-  1. Hero — Name, title, short intro
-  2. About — Brief background & current focus
-  3. Skills / Tech Stack — Visual representation
-  4. Projects — Highlight experience
-  5. Contact — Links (GitHub, LinkedIn, email, etc.)
-
----
-
-## Development Notes
-
-- Framework: Next.js (preferred)
-- Styling: Tailwind CSS
-- No unnecessary dependencies — keep it lean
-- Mobile responsive is a must
-- Animations should be subtle and purposeful
+- CI/CD Pipelines (Jenkins)
+- DevOps practices (actively expanding)
 
 ---
 
 ## Education
 
-- B.Sc (Hon's) in Computer Science and Engineering (CSE)
-- institute: Bangladesh Institute of Science and Technology(BIST)
+- **Degree:** B.Sc (Hons) in Computer Science and Engineering (CSE)
+- **Institute:** Bangladesh Institute of Science and Technology (BIST)
 
-## Current Learning Focus
+---
 
-- DevOps: Docker, CI/CD pipelines, deployment strategies
-- Cloud infrastructure basics
+## Design Direction
+
+- **Tone:** Formal, professional, recruiter-friendly
+- **Theme:** Light background (white/off-white) — like a printed CV on paper
+- **Layout:** Single-page, top-to-bottom, no hero section, no animations
+- **Typography:** Clean serif or sans-serif — optimized for readability
+- **No flashy effects** — this should look like a digital hard copy, not a portfolio
+- **Print-friendly:** Should render well when printed or exported to PDF
+
+---
+
+## Development Notes
+
+- **Framework:** Next.js (preferred)
+- **Styling:** Tailwind CSS
+- **No unnecessary dependencies — keep it lean**
+- **Mobile responsive** is required
+- **Print CSS** (`@media print`) should be included for proper PDF/print output
+- **No animations or scroll effects** — keep it static and document-like
+- Keep all CV content in a separate `data/cv.ts` config file for easy updates
+- Follow Next.js App Router conventions
 
 ---
 
 ## Conventions
 
 - Use clean, readable code
-- Component-based structure
-- Keep content in a separate data/config file for easy updates
+- Component-based structure (e.g., `<Header />`, `<Skills />`, `<Experience />`, `<Education />`)
+- All content lives in `data/cv.ts` — no hardcoded text in components
 - Follow Next.js App Router conventions
