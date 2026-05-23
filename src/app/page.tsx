@@ -26,39 +26,65 @@ export default function Home() {
           </button>
         </div>
 
-        <main className="p-8 sm:p-12 md:p-16">
-          <Header />
-          
-          <div className="mt-10 space-y-10">
-            <Section title="Professional Summary">
-              <Summary />
-            </Section>
+        {/* Print-friendly Layout using Table for repeating margins */}
+        <table className="w-full border-collapse">
+          <thead className="print:table-header-group hidden print:table-header-group">
+            <tr>
+              <td>
+                <div className="page-header-space" />
+              </td>
+            </tr>
+          </thead>
 
-            <Section title="Technical Skills">
-              <Skills />
-            </Section>
+          <tbody>
+            <tr>
+              <td>
+                <main className="p-8 sm:p-12 md:p-16 print:p-0 print:px-16">
+                  {/* Full Header with Image */}
+                  <Header />
+                  
+                  <div className="mt-10 space-y-10">
+                    <Section title="Professional Summary">
+                      <Summary />
+                    </Section>
 
-            <Section title="Work Experience">
-              <Experience />
-            </Section>
+                    <Section title="Technical Skills">
+                      <Skills />
+                    </Section>
 
-            <Section title="Key Projects">
-              <Projects />
-            </Section>
+                    <Section title="Work Experience">
+                      <Experience />
+                    </Section>
 
-            <Section title="Education">
-              <Education />
-            </Section>
+                    <Section title="Key Projects">
+                      <Projects />
+                    </Section>
 
-            <Section title="Certifications & Courses">
-              <Certifications />
-            </Section>
-          </div>
+                    <Section title="Education">
+                      <Education />
+                    </Section>
 
-          <footer className="mt-16 pt-8 border-t border-gray-200 text-center text-xs text-gray-500 print:hidden">
-            <p>© {new Date().getFullYear()} Md. Wasim Uddin. Built with Next.js & Tailwind CSS.</p>
-          </footer>
-        </main>
+                    <Section title="Certifications & Courses">
+                      <Certifications />
+                    </Section>
+                  </div>
+
+                  <footer className="mt-16 pt-8 border-t border-gray-200 text-center text-xs text-gray-500 print:hidden">
+                    <p>© {new Date().getFullYear()} Md. Wasim Uddin. Built with Next.js & Tailwind CSS.</p>
+                  </footer>
+                </main>
+              </td>
+            </tr>
+          </tbody>
+
+          <tfoot className="print:table-footer-group hidden print:table-footer-group">
+            <tr>
+              <td>
+                <div className="page-footer-space" />
+              </td>
+            </tr>
+          </tfoot>
+        </table>
       </div>
     </div>
   );

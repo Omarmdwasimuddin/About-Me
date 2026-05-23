@@ -8,6 +8,7 @@ export const cvData = {
     github: "https://github.com/Omarmdwasimuddin",
     linkedin: "https://www.linkedin.com/in/mwasimuddin/",
     website: "https://wasim-uddin-portfolio.vercel.app/",
+    imageSrc: "/profile-img/Wasim-ai.png",
   },
   summary:
     "Detail-oriented Full-Stack Developer with hands-on project and freelance experience building scalable web applications using React.js, Next.js, Prisma, and PostgreSQL. Delivered complete web solutions for local businesses including websites, admin dashboards, and billing systems. Proficient in RESTful APIs, responsive UI design, and containerized deployments with Docker. Actively seeking opportunities to bring technical skills and client delivery experience to a professional team.",
