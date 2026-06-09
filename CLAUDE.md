@@ -99,8 +99,8 @@ Standard hard-copy CV structure must be followed strictly:
 
 ---
 
-### Ayesha Maryam Store — Inventory Management System
-**Status:** In Progress (Client Project)
+### Nazim Enterprise — Inventory Management System
+**Status:** Completed (Client Project)
 
 - Building a full-featured multi-branch shop management system for a grocery/general store (2 branches, Chattogram).
 - Includes product management with barcode scanning, batch/lot tracking, and expiry date alerts.

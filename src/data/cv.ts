@@ -61,8 +61,9 @@ export const cvData = {
       techStack: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL", "Supabase", "SSLCommerz", "GSAP", "Framer Motion", "n8n"],
     },
     {
-      name: "Ayesha Maryam Store — Inventory Management System (Client Project)",
-      status: "In Progress",
+      name: "Nazim Enterprise — Inventory Management System (Client Project)",
+      status: "Completed",
+      liveUrl: "https://nazim-enterprise.vercel.app/",
       description: "Building a full-featured multi-branch shop management system with POS, barcode scanning, and expiry tracking. Includes modules for employee management, automated stock adjustment, and detailed sales/profit reports with PDF/Excel export.",
       techStack: ["Next.js", "TypeScript", "shadcn/ui", "Prisma v6", "PostgreSQL (NeonDB)", "NextAuth.js", "Uploadthing", "Zustand", "TanStack Query"],
     },
