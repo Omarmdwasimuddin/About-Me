@@ -55,7 +55,7 @@ export const cvData = {
   projects: [
     {
       name: "Tax & Trade Solutions — Client Project",
-      status: "90% Completed",
+      status: "Completed",
       liveUrl: "https://tax-and-trade-solutions.vercel.app/",
       description: "Full-stack platform for publishing and selling legal/tax reference books. Features a yearly subscription system, SSLCommerz integration, and a secure PDF reader with content protection. Currently integrating n8n-powered RAG (Retrieval-Augmented Generation) workflow for intelligent document search and automation.",
       techStack: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL", "Supabase", "SSLCommerz", "GSAP", "Framer Motion", "n8n"],
