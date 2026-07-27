@@ -72,7 +72,7 @@ export const cvData = {
     {
       degree: "B.Sc (Hons) in Computer Science and Engineering (CSE)",
       institution: "Bangladesh Institute of Science and Technology (BIST)",
-      year: "2024",
+      year: "2023",
     },
   ],
   certifications: [
